@@ -15,7 +15,7 @@ export default function List(props) {
           lists.map((list, index) => (
             <ListItem
               key={index}
-              title={list.title}
+              title={list.currentList}
               setCurrentPage ={props.setCurrentPage}
               setCurrentList = {props.setCurrentList} />
           ))
