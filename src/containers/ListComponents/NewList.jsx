@@ -7,7 +7,8 @@ export default function NewList(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newListData = {
-            title: enteredTitle,
+            currentList: enteredTitle,
+            tasksList:[]
         };
         console.log(newListData);
         props.onSaveListData(newListData);
