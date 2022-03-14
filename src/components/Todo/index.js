@@ -6,18 +6,6 @@ import NewTask from '../../containers/TaskComponents/NewTask';
 import Task from '../../containers/TaskComponents/Task';
 import EditTask from '../../containers/TaskComponents/EditTask'
 
-const lists = [
-  {
-    title: "Meeting",
-  },
-  {
-    title: "Play",
-  },
-  {
-    title: "Movie",
-  }
-];
-
 const tasksData = [
   {
     currentList: "Meeting",
@@ -70,7 +58,7 @@ const indexedTaskData = (tasksData) => {
 }
 
 export default function Todo() {
-  const [listItem, setListItem] = useState(lists);
+  const [listItem, setListItem] = useState(indexedTaskData(tasksData));
   const [currentPage, setCurrentPage] = useState('list')
   const [currentList, setCurrentList] = useState();
   const [TaskItem, setTaskItem] = useState(indexedTaskData(tasksData));
